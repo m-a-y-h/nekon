@@ -150,9 +150,10 @@ def setup_project():
             ".\\dpr\\Scripts\\Activate.ps1"  # Use PowerShell activation script
         ]
     else:
+        current_dir = os.getcwd()
         venv_commands = [
             "python3 -m venv dpr",
-            'ln -s "$(pwd)/nekon/dpr/bin/python3" "$(pwd)/nekon/dpr/bin/py"',
+            f'ln -s "{current_dir}/dpr/bin/python3" "{current_dir}/dpr/bin/py"',
             "source dpr/bin/activate"
         ]
 
