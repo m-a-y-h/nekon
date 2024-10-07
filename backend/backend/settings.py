@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'users',
+    'accounts',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -138,15 +138,23 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': nekon('RDS_DBNAME'),
-        'USER': nekon('RDS_USER'),
-        'PASSWORD': nekon('RDS_PASSWORD'),
-        'HOST': nekon('RDS_HOST'),
-        'PORT': nekon('RDS_PORT')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': nekon('RDS_DBNAME'),
+#         'USER': nekon('RDS_USER'),
+#         'PASSWORD': nekon('RDS_PASSWORD'),
+#         'HOST': nekon('RDS_HOST'),
+#         'PORT': nekon('RDS_PORT')
+#     }
+# }
+
+AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
