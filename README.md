@@ -1,3 +1,6 @@
+# Status: ⚠ Under Development till October 20, 2024 ⚠
+This project is currently in active development. Features may be incomplete or subject to change. Please be aware that significant changes may occur before the final release.
+
 # Development Phase Setup
 
 Make sure you have the following installed:
