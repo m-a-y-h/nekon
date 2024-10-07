@@ -5,7 +5,7 @@ Make sure you have the following installed:
 - [VSCode](https://code.visualstudio.com/download) | `code --version`
 - [Python 3.x](https://www.python.org/downloads/) | `python -V` and `pip -V`
 - [Node.js](https://nodejs.org/en/download/package-manager) | `node -v` and `npm -v`
-> **Note:** On Windows, `code --version` might not work if you didn't let it set its system environment variable during installation.
+> **Note:** On Windows, `code --version` command might not work if you didn't let it set its system environment variable during installation.
 ## 1. Configuring Git
 Configure Git globally if you haven't done so already; carefully edit and run the following commands in your terminal (one-by-one):
 ```bash
