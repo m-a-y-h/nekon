@@ -152,7 +152,7 @@ def setup_project():
     else:
         venv_commands = [
             "python3 -m venv dpr",
-            'ln -s "$(pwd)/dpr/bin/python3" "$(pwd)/dpr/bin/py"',
+            'ln -s "$(pwd)/nekon/dpr/bin/python3" "$(pwd)/nekon/dpr/bin/py"',
             "source dpr/bin/activate"
         ]
 
