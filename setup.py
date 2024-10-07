@@ -149,13 +149,14 @@ def setup_project():
             "py -m venv dpr",
             ".\\dpr\\Scripts\\Activate.ps1"  # Use PowerShell activation script
         ]
+        python_executable = ".\\dpr\\Scripts\\python.exe"
     else:
         current_dir = os.getcwd()
         venv_commands = [
             "python3 -m venv dpr",
             f'ln -s "{current_dir}/dpr/bin/python3" "{current_dir}/dpr/bin/py"',
-            "source dpr/bin/activate"
         ]
+        python_executable = "./dpr/bin/python3"
 
     for cmd in venv_commands:
         if is_windows:
@@ -168,13 +169,17 @@ def setup_project():
                 if not run_command(cmd):
                     raise SetupError("Virtual environment setup failed")
         else:
-            if not run_command(cmd):
+            if "ln -s" in cmd:
+                # For the symbolic link command, use os.system
+                if os.system(cmd) != 0:
+                    raise SetupError("Symbolic link creation failed")
+            elif not run_command(cmd):
                 raise SetupError("Virtual environment setup failed")
 
     # Install Python packages
     pip_commands = [
-        "py -m pip install --upgrade pip",
-        "py -m pip install -r requirements.txt"
+        f"{python_executable} -m pip install --upgrade pip",
+        f"{python_executable} -m pip install -r requirements.txt"
     ]
 
     for cmd in pip_commands:
