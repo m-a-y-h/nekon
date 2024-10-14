@@ -1,6 +1,5 @@
 dpr
 .nekon
-accounts
-backend/backend/__pycache__
-backend/accounts/__pycache__
-backend/db.sqlite3
+__pycache__
+migrations
+db.sqlite3
