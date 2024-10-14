@@ -12,3 +12,4 @@ class Share(models.Model):
     percentage = models.FloatField()  # Share percentage
     dividends = models.DecimalField(max_digits=10, decimal_places=2)
     salary = models.DecimalField(max_digits=10, decimal_places=2)
+

@@ -6,3 +6,7 @@ router.register('notifications', NotificationViewSet)
 router.register('notification-types', NotificationTypeViewSet)
 
 urlpatterns = router.urls
+from django.urls import ( path, )
+from rest_framework_simplejwt.views import ( TokenRefreshView, )
+
+urlpatterns = []
