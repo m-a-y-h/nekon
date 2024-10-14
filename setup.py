@@ -16,23 +16,31 @@ def create_nekon_config():
     """Create the .nekon configuration file in the nekon directory with placeholders for sensitive information."""
     config_content = """
 # Django Configuration
-SECRET_KEY=your_django_project_secret_key
+SECRET_KEY=
 
 # Database Configuration
-RDS_HOST=your_rds_postgres_database_endpoint
-RDS_PORT=your_rds_postgres_database_port
-RDS_DBNAME=your_rds_postgres_database_name
-RDS_USER=your_rds_postgres_database_masterusername
-RDS_PASSWORD=your_rds_postgres_database_password
+RDS_DBNAME=
+RDS_USER=
+RDS_PASSWORD=
+RDS_HOST=   
+RDS_PORT=
+
+# JWT Configurations
+EMAIL_HOST=
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
+EMAIL_PORT=2525
+DEFAULT_FROM_EMAIL=
+EMAIL_USE_TLS=
 
 # OAuth Configurations
-GOOGLE_CLIENT_ID=your_google_oauth_client_id
-GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret_key
-GITHUB_CLIENT_ID=your_github_oauth_client_id
-GITHUB_CLIENT_SECRET=your_github_oauth_client_secret_key
-
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 # Other Configurations
-DEBUG=True
+DEBUG=
+SOCIAL_AUTH_PASSWORD=
     """.strip()
 
     with open(".nekon", "w") as config_file:
