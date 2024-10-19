@@ -1,0 +1,17 @@
+{
+ "title": "Menu Management",
+  "themeToggle": "Toggle Theme",
+  "showAddForm": "Add New Dish",
+  "hideAddForm": "Hide Form",
+  "addDish": "Add New Dish",
+  "submit": "Submit",
+  "cancel": "Cancel",
+  "calories": "Calories",
+  "dietary": "Dietary Restrictions",
+  "allergens": "Allergens",
+  "orderNow": "Order Now",
+  "learnMore": "Learn More",
+  "searchPlaceholder": "Search for dishes...",
+  "searchResults": "Search Results",
+  "noResults": "No dishes found matching your search."
+}

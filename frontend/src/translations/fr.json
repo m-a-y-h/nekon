@@ -1,0 +1,17 @@
+{
+ "title": "Gestion du Menu",
+  "themeToggle": "Changer de Thème",
+  "showAddForm": "Ajouter un Nouveau Plat",
+  "hideAddForm": "Cacher le Formulaire",
+  "addDish": "Ajouter un Nouveau Plat",
+  "submit": "Soumettre",
+  "cancel": "Annuler",
+  "calories": "Calories",
+  "dietary": "Restrictions Alimentaires",
+  "allergens": "Allergènes",
+  "orderNow": "Commander Maintenant",
+  "learnMore": "En Savoir Plus",
+  "searchPlaceholder": "Rechercher des plats...",
+  "searchResults": "Résultats de la Recherche",
+  "noResults": "Aucun plat trouvé correspondant à votre recherche."
+}

@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// export default App;
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AccAndProfManagement from './components/acc_and_prof_management/AccAndProfManagement'; // Ensure this path is correct
+import SearchAndDiscovery from './components/search_and_discovery/SearchAndDiscovery';
+
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<AccAndProfManagement />} />
+                <Route path="/search_and_discovery" element={<SearchAndDiscovery />} />
+                {/* Add other routes here if needed */}
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
