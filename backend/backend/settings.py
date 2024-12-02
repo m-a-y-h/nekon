@@ -38,19 +38,18 @@ ALLOWED_HOSTS = ['*', 'http://localhost:3000']
 
 # Installed applications, including Django's default apps plus second and third party apps for API handling, CORS
 INSTALLED_APPS = [
-    'django.contrib.admin',                          # Admin panel
-    'django.contrib.auth',                           # Authentication system
-    'django.contrib.contenttypes',                   # Content types framework
-    'django.contrib.sessions',                       # Session management
-    'django.contrib.messages',                       # Messaging framework
-    'django.contrib.staticfiles',                    # Static files handling
-    'accounts',                                      # Custom user accounts app
-    'rest_framework',                                # Django REST Framework (DRF)
-    'rest_framework.authtoken',                      # Token authentication in DRF
-    'rest_framework_simplejwt.token_blacklist',      # JWT token blacklist support
-    'corsheaders',                                   # CORS headers support
-    'rest_framework_simplejwt',                      # Simple JWT for token-based authentication
-    'oauth2_provider',                               # OAuth2 provider
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'accounts',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'rest_framework_simplejwt',
+    'oauth2_provider',
 ]
 
 # Configuration for Django REST Framework (DRF)
@@ -116,21 +115,22 @@ DATABASES = {
     }
 }
 
-# Production: Uncomment the configuration below to use AWS RDS PostgreSQL database. Make sure to comment out the above used SQLite database configuration.
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': nekon('RDS_DBNAME'),
-        'USER': nekon('RDS_USER'),
-        'PASSWORD': nekon('RDS_PASSWORD'),
-        'HOST': nekon('RDS_HOST'),
-        'PORT': nekon('RDS_PORT')
-    }
-}
-"""
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': nekon('RDS_DBNAME'),
+#         'USER': nekon('RDS_USER'),
+#         'PASSWORD': nekon('RDS_PASSWORD'),
+#         'HOST': nekon('RDS_HOST'),
+#         'PORT': nekon('RDS_PORT')
+#     }
+# }
 
-# Validators for password strength and security --> https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+AUTH_USER_MODEL = 'accounts.User'
+
+# Password validation
+# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # Prevent passwords similar to attributes

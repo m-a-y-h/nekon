@@ -1,4 +1,10 @@
 from django.urls import ( path, )
 from rest_framework_simplejwt.views import ( TokenRefreshView, )
+from rest_framework.routers import DefaultRouter
+from .views import PartnerViewSet, ShareViewSet
 
-urlpatterns = []
+router = DefaultRouter()
+router.register('partners', PartnerViewSet)
+router.register('shares', ShareViewSet)
+
+urlpatterns = router.urls
