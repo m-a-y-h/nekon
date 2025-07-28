@@ -1,5 +1,5 @@
 # Status: ⚠ Development Failed ⚠
-This project is currently in active development. Features may be incomplete or subject to change. Please be aware that significant changes may occur before the final release.
+This project is declared as "failed". Features are incomplete and not subject to change by the original contributors. You may use the code selectively. Also, don't run setup.py, it probably contains the frontend, which was removed from the final code commits.
 
 # Development Phase Setup
 
