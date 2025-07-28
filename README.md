@@ -1,4 +1,4 @@
-# Status: ⚠ Under Development till February 28th, 2025 ⚠
+# Status: ⚠ Development Failed ⚠
 This project is currently in active development. Features may be incomplete or subject to change. Please be aware that significant changes may occur before the final release.
 
 # Development Phase Setup
